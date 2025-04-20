@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   css: ["@/assets/styles/main.scss"],
   modules: ["@nuxt/ui", "@vueuse/motion/nuxt", "@nuxt/image", "nuxt-vuefire"],
   vuefire: {
-    auth:{enabled: true, sessionCookie: true } ,
+    auth: { enabled: true, sessionCookie: true },
     config: {
       apiKey: process.env.apiKey,
       authDomain: process.env.authDomain,
@@ -16,10 +16,14 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: 'firebase',
+    firebase: {
+      nodeVersion: "20",
+      gen: 2,
+    },
+    preset: "firebase",
     replace: {
       [`functions.https.onRequest`]: `functions.region('europe-west2').https.onRequest`,
-    }
+    },
   },
   image: {
     q: 50,

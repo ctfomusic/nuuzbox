@@ -1,14 +1,17 @@
 {
   "functions": {
-    "source": ".output/server",
-    "runtime": "nodejs20"
+    "source": ".output/server"
   },
   "hosting": {
+    "site": "nuuzbox",
     "public": ".output/public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "server"
+      }
+    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
