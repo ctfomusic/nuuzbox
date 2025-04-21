@@ -15,6 +15,14 @@ export default defineNuxtConfig({
       appId: process.env.appId,
     },
   },
+  routeRules: {
+    '/': { ssr: true },
+    '/releases': { ssr: true },
+    '/singles': { ssr: true },
+    '/reviews': { ssr: true },
+    '/news': { ssr: true },
+    '/editorials': { ssr: true },
+  },
   nitro: {
     firebase: {
       nodeVersion: "20",
