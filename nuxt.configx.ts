@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     '/reviews': { ssr: true },
     '/news': { ssr: true },
     '/editorials': { ssr: true },
+    '/editorialsx': { ssr: true },
   },
   nitro: {
     firebase: {
